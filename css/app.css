@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.heading {
+    text-align: center;
+    font-size: 24px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.calculator-container {
+    margin: auto;
+    background: #F1F1F1;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    min-height: 200px;
+    max-width: 400px;
+}
+
+.calculator-container .banner {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    background: #E9E9E9;
+    color: #5F5E58;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.calculator-container .banner .icon-holder {
+    max-width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.calculator-container .output-screen {
+    background: #F1F1F1;
+    min-height: 100px;
+    position: relative;
+}
+
+.calculator-container .output-screen .output {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    appearance: none;
+    background: #F1F1F1;
+    font-size: 32px;
+    text-align: right;
+    padding: 10px 20px;
+    color: rgba(0, 0, 0, 0.8);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
+
+.calculator-container .output-screen .output:focus {
+    outline: none;
+}
+
+.calculator-container .output-screen input::-webkit-outer-spin-button,
+.calculator-container .output-screen input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.calculator-container .keyboard-container {
+    display: block;
+}
+
+.keyboard {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.keyboard tr {
+    border-bottom: 1px solid transparent;
+}
+
+.keyboard tr td {
+    padding: 0;
+    margin: 0;
+    border-right: 1px solid transparent;
+}
+
+.keyboard tr td .btn {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    cursor: default;
+    background: #FFFFFF;
+    text-decoration: none;
+    border: 0px;
+}
+
+.keyboard tr td .btn:focus {
+    background: #dddddd;
+    text-decoration: none;
+    outline: none;
+}
+
+.keyboard tr td .btn:hover {
+    text-decoration: none;
+}
+
+.keyboard tr td:last-child {
+    border-right: 0;
+}
+
+.keyboard tr td:last-child .btn {
+    background: #FF9224;
+    color: #FFFFFF;
+}
+
+.keyboard tr td:last-child .btn:focus {
+    background: #df7000;
+}
+
+.keyboard tr:last-child {
+    border-bottom: 0;
+}
+
+.keyboard tr:last-child td:first-child .btn {
+    border-bottom-left-radius: 8px;
+}
+
+.keyboard tr:last-child td:last-child .btn {
+    border-bottom-right-radius: 8px;
+}
